@@ -1,0 +1,26 @@
+[
+	{
+		"id" : 1,
+		"family" : "Vazir",
+		"value" : "Vazir",
+		"href": "https://cdn.rawgit.com/rastikerdar/vazir-font/v4.4.1/dist/font-face.css"
+	},
+	{
+		"id" : 2,
+		"family" : "Samim",
+		"value" : "Samim",
+		"href": "https://cdn.rawgit.com/rastikerdar/samim-font/v1.0.2/dist/font-face.css"
+	},
+	{
+		"id" : 3,
+		"family" : "Vazir Code",
+		"value" : "Vazir Code",
+		"href": "https://cdn.rawgit.com/rastikerdar/vazir-code-font/v1.0.2/dist/font-face.css"
+	},
+	{
+		"id" : 4,
+		"family" : "Shabnam",
+		"value" : "Shabnam",
+		"href": "https://cdn.rawgit.com/rastikerdar/shabnam-font/v1.0.2/dist/font-face.css"
+	}
+]

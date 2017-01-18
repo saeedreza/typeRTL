@@ -1,0 +1,332 @@
+// bower:scss
+// endbower
+
+html, body {
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	min-height: 100%;
+	width: 100%;
+}
+
+body {
+	position: relative;
+	display: -ms-flexbox;
+	display: flex;
+	direction: rtl;
+	letter-spacing: 0;
+	color: rgba(0, 0, 0, 0.8);
+	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+	font-size: 18px;
+	font-weight: 400;
+	font-style: normal;
+	line-height: 1.4;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+*:after,
+*:before {
+	box-sizing: border-box;
+}
+
+::-moz-selection {
+	background: rgba(252, 208, 54, 0.5);
+	color: black;
+}
+
+::selection {
+	background: rgba(252, 208, 54, 0.5);
+	color: black;
+}
+
+.link {
+	color: black;
+	font-weight: bold;
+	text-decoration: none;
+	background: rgba(252, 208, 54, 0.4);
+	padding: 2px 4px;
+	color: black;
+	opacity: 1;
+	cursor: pointer;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 34px;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+aside {
+	position: relative;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+	height: 100vh;
+	color: rgba(0, 0, 0, 0.5);
+	border-left: 2px solid #f0f0f0;
+	background: whitesmoke;
+	-ms-flex: 0 0 280px;
+		flex: 0 0 280px;
+	cursor: default;
+
+	@media (max-width: 768px) {
+		display: none;
+	}
+	@media (min-width: 1400px) {
+		-ms-flex: 0 0 340px;
+			flex: 0 0 340px;
+	}
+
+	.control-element {
+		position: relative;
+		padding: 20px;
+		border-bottom: 2px solid #ededed;
+		&.logo {
+			text-align: center;
+		}
+		.control-element-name {
+			margin-bottom: 6px;
+			font-size: 13px;
+		}
+		.control-element-settings {
+			display: -ms-flexbox;
+			display: flex;
+			-ms-flex-align: center;
+				align-items: center;
+		}
+		&.credentials {
+			font-size: 13px;
+			line-height: 1.6;
+			text-align: center;
+			border-bottom: none;
+		}
+	}
+}
+
+main {
+	// display: none;
+	@media (min-width: 769px) {
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-pack: center;
+		  justify-content: center;
+		-ms-flex-align: center;
+		  align-items: center;
+		padding: 80px 40px;
+		-ms-flex: 1 1 80%;
+		  flex: 1 1 80%;
+		height: 100vh;
+		overflow-y: auto;
+		-webkit-overflow-scrolling: touch;
+		position: relative;
+	}
+	.article {
+		max-height: 100vh;
+		max-width: 700px;
+		margin: 0 auto;
+		word-wrap: break-word;
+		word-break: break-word;
+		outline: 0;
+
+		.tag {
+			transition: all 0.4s ease;
+			word-wrap: normal;
+    		word-break: normal;
+			&:hover {
+				// background-color: rgba(241, 241, 241, 1);
+				cursor: default;
+			}
+		}
+	}
+}
+
+
+/*get code pop-up css*/
+	.button {
+		float: left;
+		margin: 0.5em 0 0 -1em;
+		font-family: Helvetica, Arial, sans-serif;
+		font-size: 13px;
+		padding: 5px 10px;
+		border: 1px solid #aaa;
+		background-color: #f1f1f1;
+		border-radius: 2px;
+		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+		color: #666;
+		text-decoration: none;
+		text-shadow: 0 1px 0 #fff;
+		cursor: pointer;
+		transition: all 0.2s ease-out;
+	}
+	.copy {
+		font-family: Helvetica, Arial, sans-serif;
+		font-size: 17px;
+		font-weight: bold;
+		padding: 5px 10px;
+		border: 1px solid #aaa;
+		background-color: rgba(252, 208, 54, 0.6);
+		border-radius: 40px;
+		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+		color: #000000;
+		/*text-decoration: none;*/
+		/*text-shadow: 0 1px 0 #fff;*/
+		cursor: pointer;
+		/*transition: all 0.2s ease-out;*/
+	}
+	.button:hover {
+		border-color: #999;
+		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+	}
+	.button:active {
+		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25) inset;
+	}
+	.overlay {
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: rgba(0, 0, 0, 0.5);
+		transition: opacity 200ms;
+		visibility: hidden;
+		opacity: 0;
+	}
+	.overlay.light {
+		background: rgba(255, 255, 255, 0.5);
+	}
+	.overlay .cancel {
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		cursor: default;
+	}
+	.overlay:target {
+		visibility: visible;
+		opacity: 1;
+	}
+
+	.popup {
+		margin: 75px auto;
+		padding: 20px;
+		background: #f1f1f1;
+		border: 1px solid #666;
+		width: 45em;
+		box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+		position: relative;
+		padding-top: 0px;
+		padding-bottom: 1.5em;
+	}
+	.popup h2 {
+		margin-top: 0;
+		color: #666;
+		font-family: "Trebuchet MS", Tahoma, Arial, sans-serif;
+	}
+	.popup .close {
+		background: #000000;
+		position: absolute;
+		width: 40px;
+		height: 33px;
+		top: -1.4em;
+		right: 0px;
+		opacity: 0.8;
+		transition: all 200ms;
+		font-size: 24px;
+		font-weight: bold;
+		text-decoration: none;
+		color: #ffffff;
+	}
+	.popup .close:hover {
+		color: #ffffff;
+		opacity: 1;
+	}
+	.popup .content {
+		max-height: 400px;
+		overflow: auto;
+	}
+	.popup p {
+		margin: 0 0 1em;
+	}
+	.popup p:last-child {
+		margin: 0;
+	}
+	#css_label {
+		border: none;
+		background: #f1f1f1;
+	}
+	#copy_code {
+		margin: 3em 40%;
+		position: absolute;
+	}
+	.clipy {
+		margin-top: -3px;
+		position: relative;
+		top: 3px;
+	}
+	.text_editor {
+		height: 600px;
+		border: none;
+		background: #ddd;
+		color: #000;
+		font-size: 14px;
+		font-family: arial;
+		width: 700px;
+		cursor: text;
+	}
+	small {
+		font-weight: 500;
+		font-family: sans-serif;
+	}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+.spinner img {
+	width: 100%;
+	max-width: 26px;
+}
